@@ -1,0 +1,206 @@
+@font-face {
+    font-family: "Young Serif";
+    src: url(./assets/fonts/young-serif/YoungSerif-Regular.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Outfit';
+    src: url(./assets/fonts/outfit/Outfit-VariableFont_wght.ttf) format("truetype-variations");
+    font-weight: 400 700;
+}
+
+:root {
+    --main-bg-color: hsl(30, 54%, 90%);
+    --main-text-color: hsl(30, 10%, 34%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit';
+}
+
+body {
+    background-color: var(--main-bg-color);
+    display: grid;
+    justify-content: center;
+    padding: 120px 0;
+}
+
+.card {
+    width: 738px;
+    height: 1710px;
+    background-color: white;
+    padding: 40px;
+    border-radius: 25px;
+}
+
+.card-img {
+    max-width: 658px;
+    border-radius: 13px;
+    margin-bottom: 30px;
+}
+
+header h2 {
+    font-family: 'Young Serif';
+    color: hsl(24, 5%, 18%);
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    font-weight: 300;
+}
+
+header p {
+    color: var(--main-text-color);
+    margin-bottom: 30px;
+    line-height: 1.5rem;
+}
+
+.card-preparation {
+    background-color: hsl(330, 100%, 98%);
+    border-radius: 10px;
+    padding: 25px 28px 20px;
+}
+
+.card-preparation h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: hsl(332, 51%, 32%);
+    margin-bottom: 1rem;
+}
+
+.card-preparation ul,
+.card-ingredients ul,
+.card-instructions ol {
+    padding-left: 1.3rem;
+}
+
+.card-preparation ul li::marker {
+    color: hsl(332, 51%, 32%);
+}
+
+.card-preparation ul li::marker,
+.card-ingredients ul li::marker,
+.card-instructions ol li::marker {
+    font-size: 13px;
+}
+
+.card-preparation ul li,
+.card-ingredients ul li,
+.card-instructions ol li {
+    padding-left: 1.3rem;
+    margin-bottom: 12px;
+    color: hsl(30, 10%, 34%);
+}
+
+.card-instructions ol li {
+    line-height: 1.4rem;
+}
+
+
+.card-preparation ul li span,
+.card-instructions ol li span {
+    /* color: hsl(24, 5%, 18%); */
+    font-weight: 600;
+}
+
+.card-preparation,
+.card-ingredients,
+.card-instructions {
+    margin-bottom: 2rem;
+}
+
+.card-ingredients h2,
+.card-instructions h2,
+.card-nutrition h2 {
+    font-family: 'Young Serif';
+    font-size: 1.75rem;
+    color: hsl(14, 45%, 36%);
+    font-weight: 100;
+    margin-bottom: 1rem;
+}
+
+.card-ingredients ul li::marker,
+.card-instructions ol li::marker {
+    color: hsl(14, 45%, 36%);
+}
+
+hr {
+    background-color: hsl(30, 18%, 87%);
+    height: 1px;
+    border: 0;
+    margin-bottom: 1.8rem;
+}
+
+.card-instructions {
+    padding-right: 1rem;
+}
+
+.card-instructions ol li::marker {
+    font-size: 1rem;
+    font-family: 'Outfit';
+    font-weight: 500;
+}
+
+.card-nutrition p {
+    color: var(--main-text-color);
+    margin-bottom: 1rem;
+}
+
+.card-nutrition table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.card-nutrition tr {
+    border-bottom: 1px solid hsl(30, 18%, 87%);
+}
+
+.card-nutrition tr:last-child {
+    border: none;
+}
+
+.card-nutrition td {
+    padding: 13px 33px;
+}
+
+.card-nutrition td:first-of-type {
+    color: var(--main-text-color);
+    padding: 13px 33px;
+}
+
+.card-nutrition td:last-of-type {
+    color: hsl(14, 45%, 36%);
+    font-weight: 600;
+    padding-right: 55px;
+}
+
+@media (max-width: 740px) {
+    body {
+        padding: 0;
+        background-color: white;
+    }
+
+    .card {
+        padding: 0;
+        border-radius: 0;
+        height: auto;
+        width: auto;
+        padding-bottom: 30px;
+    }
+
+    .card-img {
+        max-width: 100%;
+        border-radius: 0;
+    }
+
+    .card-body {
+        padding: 0 30px 0;
+    }
+
+    header h2 {
+        font-size: 2rem;
+    }
+
+}
